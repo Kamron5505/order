@@ -129,7 +129,7 @@ body {
 
 .web-design__nav {
     padding-top: 32px;
-    padding-bottom: 42pc;
+    padding-bottom: 42px;
 }
 
 .web-design__tab {
@@ -148,6 +148,33 @@ body {
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel__track {
+    display: flex;
+    width: max-content;
+    animation: scrollTabs 25s linear infinite;
+}
+
+@keyframes scrollTabs {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.web-design__tab {
+    flex: 0 0 auto;
+    margin-right: 40px;
+    white-space: nowrap;
+}
 
 .web-design__tab:hover {
     background: #63d92b;
@@ -155,25 +182,190 @@ body {
 }
 
 
-.web-design__tab--active {}
 
 .web-design__content {}
 
-.web-design__title {}
+.web-design__title {
+    font-weight: 400;
+    font-size: 96px;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
 
-.web-design__subtitle {}
+.web-design__subtitle {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
 
 .web-design__steps {}
 
 .step {}
 
-.step__number {}
+.step__number {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    border-radius: 100%;
+    background-color: #63d92b;
+}
 
 .step__content {}
 
-.step__title {}
+.step__title {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    color: #fff;
+}
 
-.step__text {}
+.step__text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.15em;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .hero__title {
+        font-size: 72px;
+    }
+
+    .web-design__title {
+        font-size: 72px;
+    }
+
+    .web-design__subtitle {
+        font-size: 28px;
+    }
+
+    .web-design__tab {
+        width: 300px;
+        height: 65px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .hero__content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 56px;
+    }
+
+    .hero__subtitle {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .web-design__title {
+        font-size: 56px;
+    }
+
+    .web-design__subtitle {
+        font-size: 24px;
+    }
+
+    .web-design__tab {
+        width: 260px;
+        height: 60px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .header-nav-button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .hero__title {
+        font-size: 42px;
+    }
+
+    .hero__subtitle {
+        font-size: 18px;
+    }
+
+    .web-design__title {
+        font-size: 42px;
+    }
+
+    .web-design__subtitle {
+        font-size: 20px;
+    }
+
+    .web-design__tab {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 32px;
+    }
+
+    .hero__subtitle {
+        font-size: 16px;
+    }
+
+    .web-design__title {
+        font-size: 32px;
+    }
+
+    .web-design__subtitle {
+        font-size: 18px;
+    }
+
+    .step__title,
+    .step__text {
+        font-size: 18px;
+    }
+
+    .step__number {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .header-nav-button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .web-design__tab {
+        font-size: 14px;
+        padding: 0 12px;
+    }
+}
 
 .step__price {}
 
